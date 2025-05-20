@@ -23,3 +23,27 @@ let getHumanChoice = () => {
     return humanChoice;
   }
 };
+
+let playRound = (humanChoice, computerChoice) => {
+  humanChoice = humanChoice.toUpperCase();
+  computerChoice = computerChoice.toUpperCase();
+
+  if (humanChoice === computerChoice) {
+    console.log(`It's a tie! Both chose ${humanChoice}`);
+    return "Tie";
+  }
+
+  if (
+    (humanChoice === "ROCK" && computerChoice === "SCISSORS") ||
+    (humanChoice === "PAPER" && computerChoice === "ROCK") ||
+    (humanChoice === "SCISSORS" && computerChoice === "PAPER")
+  ) {
+    humanScore++;
+    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    return "Win";
+  } else {
+    computerScore++;
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    return "Lose";
+  }
+};
