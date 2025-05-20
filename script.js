@@ -47,3 +47,28 @@ let playRound = (humanChoice, computerChoice) => {
     return "Lose";
   }
 };
+
+let playGame = () => {
+  let humanScore = 0;
+  let computerScore = 0;
+
+  for (let i = 0; i < 5; i++) {
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+  }
+
+  console.log("Final Scores:");
+  console.log("Human:", humanScore);
+  console.log("Computer:", computerScore);
+
+  if (humanScore > computerScore) {
+    console.log("You won the game!");
+  } else if (humanScore < computerScore) {
+    console.log("Computer won the game!");
+  } else {
+    console.log("It's a tie game!");
+  }
+};
+
+playGame();
