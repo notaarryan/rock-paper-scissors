@@ -1,5 +1,3 @@
-
-
 # Rock Paper Scissors Game
 
 This is a simple **Rock Paper Scissors** game implemented in JavaScript. It's a console-based game where a human plays against the computer for 5 rounds.
